@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>一键生成名句卡片 - Zen Quotes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Importing specific fonts for different styles: 
+         Noto Serif SC (Standard/Zen), 
+         Ma Shan Zheng (Ink/Calligraphy), 
+         ZCOOL KuaiLe (Anime), 
+         Long Cang (Cursive/Ancient),
+         Noto Sans SC (Modern/Bold) -->
+    <link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Ma+Shan+Zheng&family=Noto+Sans+SC:wght@100;300;400;500;700;900&family=Noto+Serif+SC:wght@200;400;700;900&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet" crossorigin="anonymous">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              zen: {
+                50: '#f4f7f5',
+                100: '#e3ebe6',
+                200: '#c5d9cd',
+                300: '#9abaaa',
+                400: '#769886',
+                500: '#587a68',
+                600: '#425f50',
+                700: '#364d42',
+                800: '#2d3f37', // Deep Zen Green
+                900: '#26342e',
+              },
+              ink: {
+                paper: '#fdfbf7',
+                black: '#1a1a1a',
+              }
+            },
+            fontFamily: {
+              sans: ['"Noto Sans SC"', 'sans-serif'],
+              serif: ['"Noto Serif SC"', 'serif'],
+              calligraphy: ['"Ma Shan Zheng"', 'cursive'],
+              cursive: ['"Long Cang"', 'cursive'],
+              anime: ['"ZCOOL KuaiLe"', 'cursive'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom scrollbar for a cleaner look */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "html-to-image": "https://aistudiocdn.com/html-to-image@^1.11.13"
+  }
+}
+</script>
+</head>
+  <body class="bg-zen-50 text-zen-900 antialiased selection:bg-zen-200 selection:text-zen-900">
+    <div id="root"></div>
+  </body>
+</html>
